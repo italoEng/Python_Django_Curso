@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return render(request, 'recipes\pages\home.html', context={'name': 'Italo'})
+    return render(request, 'recipes/pages/home.html', context={'name': 'Italo'})
 
-def sobre(request):
-    return HttpResponse('Sobre')
+def recipe(request, id):
+    return render(request, 'recipes/pages/recipe-view.html', context={'name': 'Italo'})
